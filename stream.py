@@ -76,15 +76,15 @@ with tab1:
         if submit_button and flag==0:
             
             import pickle
-            with open(r"source/model.pkl", 'rb') as file:
+            with open("model.pkl", 'rb') as file:
                 loaded_model = pickle.load(file)
-            with open(r'source/scaler.pkl', 'rb') as f:
+            with open('scaler.pkl', 'rb') as f:
                 scaler_loaded = pickle.load(f)
 
-            with open(r"source/t.pkl", 'rb') as f:
+            with open("t.pkl", 'rb') as f:
                 t_loaded = pickle.load(f)
 
-            with open(r"source/s.pkl", 'rb') as f:
+            with open("s.pkl", 'rb') as f:
                 s_loaded = pickle.load(f)
 
             new_sample= np.array([[np.log(float(quantity_tons)),application,np.log(float(thickness)),float(width),country,float(customer),int(product_ref),item_type,status]])
@@ -131,13 +131,13 @@ with tab2:
              
         if csubmit_button and cflag==0:
             import pickle
-            with open(r"source/cmodel.pkl", 'rb') as file:
+            with open("cmodel.pkl", 'rb') as file:
                 cloaded_model = pickle.load(file)
 
-            with open(r'source/cscaler.pkl', 'rb') as f:
+            with open('cscaler.pkl', 'rb') as f:
                 cscaler_loaded = pickle.load(f)
 
-            with open(r"source/ct.pkl", 'rb') as f:
+            with open("ct.pkl", 'rb') as f:
                 ct_loaded = pickle.load(f)
 
             # Predict the status for a new sample
